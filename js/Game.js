@@ -15,6 +15,13 @@ class Game{
  
         return players;          
      }
+
+     /*
+     * Gets game ready for play
+     */
+  startGame(){
+
+     }
  
 
 }
