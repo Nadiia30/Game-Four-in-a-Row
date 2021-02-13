@@ -5,22 +5,30 @@ class Game{
         this.ready = false;
     }
 
-/** 
- * Creates two player objects
- * @return  {Array}    An array of two Player objects.
- */
-  createPlayers(){
+    /** 
+    * Creates two player objects
+    * @return  {Array}    An array of two Player objects.
+    */
+    createPlayers(){
      const players = [new Player("Player1",1,"#e15258",true), 
                       new Player("Player2",2,"#e59a13")]
  
         return players;          
      }
 
-     /*
+     /**
      * Gets game ready for play
      */
-  startGame(){
+    startGame(){
 
+     }
+
+    /**
+    * Returns active player.
+    * @return {Object} player - The active player.  
+    */
+     get activePlayer(){
+         return this.players.find(player => player.active);
      }
  
 

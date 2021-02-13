@@ -5,11 +5,10 @@ class Board{
         this.spaces = this.createSpaces();
     }
 
-/** 
- * Generates 2D array of spaces. 
- * @return  {Array}     An array of space objects
- */
-
+    /** 
+    * Generates 2D array of spaces. 
+    * @return  {Array}     An array of space objects
+    */
    createSpaces(){
        const spaces = [];
 
@@ -25,5 +24,16 @@ class Board{
        }
 
        return spaces;
+   }
+
+   /**
+    * Draws associated SVG spaces for all game spaces. 
+    */   
+   drawHTMLBoard(){
+       for(let column of this.spaces){
+           for( let space of column){
+            space.drawSVGSpace();
+           }
+      }
    }
 }
